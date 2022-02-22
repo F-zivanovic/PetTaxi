@@ -1,0 +1,63 @@
+@import '../variables';
+@import '../mixins';
+
+/*-----------------------------------------
+ABOUT SECTION 
+------------------------------------------*/
+.about{
+  
+    &-content{
+        @include flex(center,space-around,row,wrap);
+
+        article{
+
+            ul{
+                li{
+                    font-size: 1.2rem;
+
+                    @include breakpoint(sm){
+                        font-size: 0.8rem;
+                    }
+                }
+            }
+
+            &:first-child{
+              
+                @include flex(center,center,column,nowrap);
+
+                @include breakpoint(lg){
+                    order: 10;
+                }
+                
+            }
+
+            .about-icons{
+
+                 i{
+                     @include icons;
+                 }
+
+                 span{
+                     font-size: 1rem;
+
+                     @include breakpoint(sm){
+                        font-size: 0.8rem;
+                    }
+                 }
+            }
+
+            img{
+                height: 600px;
+
+                @media(max-width:992px){
+                    order: 3;
+                }
+
+                @media(max-width:576px){
+                    height: 400px;
+                }
+            }
+
+        }
+    }
+} 

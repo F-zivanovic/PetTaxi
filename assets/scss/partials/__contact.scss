@@ -1,0 +1,63 @@
+@import '../variables';
+@import '../mixins';
+
+/*-----------------------------------------
+CONTACT SECTION
+------------------------------------------*/
+.contact{
+
+    &-content{
+  
+        @include flex(space-between,center,row,nowrap);
+    
+        @media(max-width:992px){
+            flex-direction:column;
+        }
+    
+        .contact-info{
+             flex: 1;
+
+            &-item{
+                
+                i{
+                  @include icons;
+                }
+            }
+        }
+        
+        form{
+    
+            flex: 2;
+
+            @media(max-width:576px){
+                width: 100%;
+            }
+
+          .form-control{
+            margin-top: 10px;
+            padding: 15px;
+            text-transform: uppercase;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 5px;
+            border: none;
+            outline: none;
+            border: 2px solid $primaryColor
+            
+          }
+
+          .form-group{
+              @include flex(space-between,center,row,nowrap);
+
+              @include breakpoint(sm){
+                flex-direction: column;
+              }
+
+              input{
+                  flex: 0 0 48%;
+              }  
+        
+            }
+        }   
+    }
+}

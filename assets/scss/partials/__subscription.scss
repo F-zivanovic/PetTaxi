@@ -1,0 +1,41 @@
+@import '../variables';
+@import '../mixins';
+
+
+/*-----------------------------------------
+SUBSCRIPTION SECTION
+------------------------------------------*/
+.subscription{
+
+    &-content{
+        @include grid(4,15px);
+
+        @include breakpoint(lg){
+            grid-template-columns:repeat(1,1fr);
+        }
+
+        &-card{
+            height: 100%;
+
+           &:first-child{
+               @include flex(center,flex-start,column,nowrap);
+
+               .sub-logo{
+                   font-size: 2rem;
+               }
+           }
+
+           h3{
+               font-size: 1.3rem;
+           }
+
+           .subscription-social{
+
+            i{
+                @include icons($secondaryColor);
+                
+               }
+            }   
+        }
+    }
+}

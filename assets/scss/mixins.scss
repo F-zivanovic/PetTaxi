@@ -1,0 +1,93 @@
+@import 'variables';
+
+@mixin flex ($justify, $align, $direction, $wrap){
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+}
+
+@mixin grid ($column, $gap){
+    display: grid;
+    grid-template-columns: repeat($column, 1fr);
+    grid-gap: $gap;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin breakpoint($point) {
+
+    @if $point == xl {
+      @media (max-width: 1200px) {
+           @content ; 
+        }
+   }
+
+    @else if $point == lg {
+      @media (max-width: 992px) {
+           @content ; 
+        }
+   }
+
+     @else if $point == md {
+      @media (max-width: 768px) { 
+          @content ; 
+        }
+   }
+
+    @else if $point == sm {
+      @media (max-width: 576px)  {
+           @content ; 
+        }
+   }
+
+   @else if $point == xs {
+      @media (max-width:0px)  { 
+          @content ; 
+        }
+   }
+ }
+ 
+
+@mixin bgImage ($height, $width, $bgPosition, $bgRepeat, $bgAtachment, $bgSize) {
+    height: $height;
+    width: $width;
+    background-position: $bgPosition;
+    background-repeat: $bgRepeat;
+    background-attachment: $bgAtachment;
+    background-size: $bgSize;  
+}
+
+@mixin positioning ($position, $top, $right, $bottom, $left) {
+    position: $position;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
+
+@mixin icons ($bg: $primaryColor) {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    line-height: 60px;
+    font-size: 1.5rem;
+    text-align: center;
+    background-color: $bg;
+    color: $white;
+
+    &:hover{
+        transform: rotate(360deg);
+        transition-duration: 0.8s;
+    }  
+
+    @media(max-width:576px){
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        line-height: 45px;
+        font-size: 1.3rem;
+    }
+}
+

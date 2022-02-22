@@ -1,0 +1,39 @@
+@import '../variables';
+@import '../mixins';
+
+/*-----------------------------------------
+SERVICES SECTION
+------------------------------------------*/
+.services{
+
+    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url('../img/services-bg.jpg');
+    @include bgImage(auto, 100%, center, no-repeat, fixed, cover);
+   
+    h3{
+        color: $white;
+    }
+
+    &-content{
+        margin-top: 40px;
+        @include grid(2,20px);
+       
+        @media(max-width:768px){
+            grid-template-columns: repeat(1,1fr);
+        }
+
+        article{
+
+            h4{
+                font-size: 1.2rem;
+
+                @media(max-width:576px){
+                    font-size: 1rem;
+                }
+            }
+
+            i{
+                @include icons;
+            }
+        }
+    }
+}

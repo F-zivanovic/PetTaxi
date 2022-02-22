@@ -1,0 +1,100 @@
+@import '../variables';
+@import '../mixins';
+@import '../animations';
+
+
+/*-----------------------------------------
+NAVBAR SECTION 
+------------------------------------------*/ 
+
+nav{
+    height: 10vh;
+    display: flex;
+  
+    .nav-content{
+        @include flex(space-between,center,row,nowrap);
+
+        .logo{
+            font-size: 2rem;
+            letter-spacing: 1px;
+
+            @include breakpoint(sm){
+                font-size: 1.5rem;
+            }
+
+            &:hover{
+                opacity: 0.7
+            }
+        }
+
+        ul{
+            @include flex(center,center,row,nowrap);
+
+            @include breakpoint(lg){
+                display: none;
+            }
+
+            li{
+                a{
+                    &:hover{
+                        opacity: 0.6;
+                    }
+                }
+            }
+        }
+
+        .toggle{
+            background: url(https://i.ibb.co/HrfVRcx/menu.png);
+            @include bgImage(45px, 45px, center, no-repeat, auto, 25px);
+            cursor: pointer;
+            z-index: 20;
+            border-radius: 10px;
+            display: none;
+
+            @include breakpoint(lg){
+                display: block;
+            }
+
+            @include breakpoint(sm){
+                width: 35px;
+                height: 35px;
+                background-size: 20px;
+            }
+          
+        }
+    }
+
+    .hidden{
+        display: none;
+    }
+
+    .hamburger-menu{
+        @include positioning(fixed, 0%, 0%, auto, auto);
+        height: 100vh;
+        z-index: 15;
+        animation: moveInFromLeft 1s;
+        
+
+        ul{
+            @include positioning(absolute, 50%, auto, auto, 50%);
+            transform: translate(-50%, -50%);
+
+            li{
+                font-size: 1.5rem;
+
+                @include breakpoint(sm){
+                    font-size: 1.2rem;
+                }
+            }
+
+            .social{
+
+                a{
+                    i{ 
+                        @include icons; 
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,80 @@
+@import '../variables';
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: $bodyFont;
+    line-height: 1.5;
+    font-size: $fontSize;
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    color: $headingsColor;
+    font-weight: 700;
+}
+
+img{
+    width: 100%;
+}
+
+a{
+    text-decoration: none;
+    color: $white;
+    
+    &:hover{
+        transition: $transition;
+        cursor: pointer;
+        opacity: 0.75;
+    }
+}
+
+ul{
+    list-style-type: none;
+}
+
+section{
+    padding: $padding;
+}
+
+p{
+    font-size: 1rem;
+
+    @media(max-width:576px){
+        font-size: 0.8rem;
+    }
+}
+
+button{
+  
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: 600;
+        letter-spacing: 1px;
+        background:linear-gradient(45deg, $secondaryColor 0%, $primaryColor 100%);
+        padding: 15px 30px;
+        border: none;
+        border-radius: 10px;
+        border: 2px solid white; 
+    
+        &:hover{
+            background:linear-gradient(45deg, $primaryColor 0%, $secondaryColor 100%);
+            transition: $transition;
+            cursor: pointer;
+        }
+    
+        @media(max-width:576px){
+            padding: 10px 15px;
+            font-size: 0.8rem;
+        }
+}
