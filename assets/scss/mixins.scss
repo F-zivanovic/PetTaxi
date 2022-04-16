@@ -1,6 +1,4 @@
-@import 'variables';
-
-@mixin flex ($justify, $align, $direction, $wrap){
+@mixin flex ($justify, $align, $direction:row, $wrap:nowrap) {
     display: flex;
     justify-content: $justify;
     align-items: $align;
@@ -8,7 +6,7 @@
     flex-wrap: $wrap;
 }
 
-@mixin grid ($column, $gap){
+@mixin grid ($column, $gap) {
     display: grid;
     grid-template-columns: repeat($column, 1fr);
     grid-gap: $gap;
@@ -16,78 +14,77 @@
     align-items: center;
 }
 
-@mixin breakpoint($point) {
+@mixin breakpoint($breakpoint) {
 
-    @if $point == xl {
-      @media (max-width: 1200px) {
-           @content ; 
+    @if $breakpoint==xl {
+        @media (max-width: 1200px) {
+            @content ;
         }
-   }
+    }
 
-    @else if $point == lg {
-      @media (max-width: 992px) {
-           @content ; 
+    @else if $breakpoint==lg {
+        @media (max-width: 992px) {
+            @content ;
         }
-   }
+    }
 
-     @else if $point == md {
-      @media (max-width: 768px) { 
-          @content ; 
+    @else if $breakpoint==md {
+        @media (max-width: 768px) {
+            @content ;
         }
-   }
+    }
 
-    @else if $point == sm {
-      @media (max-width: 576px)  {
-           @content ; 
+    @else if $breakpoint==sm {
+        @media (max-width: 576px) {
+            @content ;
         }
-   }
+    }
 
-   @else if $point == xs {
-      @media (max-width:0px)  { 
-          @content ; 
+    @else if $breakpoint==xs {
+        @media(max-width:350px) {
+            @content;
         }
-   }
- }
- 
-
-@mixin bgImage ($height, $width, $bgPosition, $bgRepeat, $bgAtachment, $bgSize) {
-    height: $height;
-    width: $width;
-    background-position: $bgPosition;
-    background-repeat: $bgRepeat;
-    background-attachment: $bgAtachment;
-    background-size: $bgSize;  
+    }
 }
 
-@mixin positioning ($position, $top, $right, $bottom, $left) {
+@mixin bgImage ($bgPosition, $bgRepeat, $bgSize, $height, $width) {
+    background-position: $bgPosition;
+    background-repeat: $bgRepeat;
+    background-size: $bgSize;
+    height: $height;
+    width: $width;
+}
+
+@mixin positioning ($position, $top, $right, $bottom, $left, $width:100%, $height:100%) {
     position: $position;
     top: $top;
     right: $right;
     bottom: $bottom;
     left: $left;
+    width: $width;
+    height: $height;
 }
 
 @mixin icons ($bg: $primaryColor) {
-    width: 60px;
-    height: 60px;
+    width: 55px;
+    height: 55px;
     border-radius: 50%;
-    line-height: 60px;
-    font-size: 1.5rem;
+    line-height: 55px;
+    font-size: 1.4rem;
     text-align: center;
     background-color: $bg;
     color: $white;
 
-    &:hover{
+    &:hover {
         transform: rotate(360deg);
         transition-duration: 0.8s;
-    }  
+    }
 
-    @media(max-width:576px){
-        width: 45px;
-        height: 45px;
+    @include breakpoint(sm) {
+        width: 35px;
+        height: 35px;
         border-radius: 50%;
-        line-height: 45px;
-        font-size: 1.3rem;
+        line-height: 35px;
+        font-size: 1rem;
     }
 }
-

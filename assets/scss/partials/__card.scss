@@ -1,24 +1,29 @@
-@import '../variables';
-@import '../mixins';
-
-
-/*-----------------------------------------
-CARD
-------------------------------------------*/
 .card {
-    @include positioning(fixed, auto, 10px, 10px, auto);
+    @include positioning(fixed, auto, 15px, 15px, auto, auto, auto);
+    background: linear-gradient(45deg, #207dff 0%, #00bd55 100%);
+    font-size: 0.9rem;
+    border: 2px solid white;
     padding: 10px 15px;
-    border-radius: 4px;
-    border: 2px solid white;   
 
-    &:hover{
-        background:linear-gradient(45deg, $primaryColor 0%, $secondaryColor 100%);
+
+    &:hover {
+        cursor: pointer;
+        opacity: 0.75;
         transition: $transition;
+        background: linear-gradient(45deg, #00bd55 0%, #207dff 100%);
+    }
+}
+
+.card-info {
+    @include positioning(fixed, auto, 15px, 15px, auto, auto, auto);
+    transition: $transition;
+
+    .gg-close-r {
+        @include positioning(absolute, 10px, 10px, auto, auto, auto, auto);
         cursor: pointer;
     }
 
-    @include breakpoint(sm){
-        padding: 10px;
-        font-size: 0.8rem;
+    &.active {
+        right: 15px;
     }
 }

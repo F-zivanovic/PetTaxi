@@ -1,98 +1,89 @@
-@import '../variables';
-@import '../mixins';
-@import '../animations';
+nav {
+    padding: 15px 0px;
+    background: linear-gradient(45deg, $secondaryColor 0%, $primaryColor 100%);
+    position: fixed;
+    z-index: 15;
 
+    .nav-content {
+        @include flex(space-between, center);
 
-/*-----------------------------------------
-NAVBAR SECTION 
-------------------------------------------*/ 
-
-nav{
-    height: 10vh;
-    display: flex;
-  
-    .nav-content{
-        @include flex(space-between,center,row,nowrap);
-
-        .logo{
+        .logo {
             font-size: 2rem;
             letter-spacing: 1px;
 
-            @include breakpoint(sm){
+            @include breakpoint(sm) {
                 font-size: 1.5rem;
-            }
-
-            &:hover{
-                opacity: 0.7
             }
         }
 
-        ul{
-            @include flex(center,center,row,nowrap);
 
-            @include breakpoint(lg){
+        ul {
+            @include flex(center, center);
+
+            @include breakpoint(lg) {
                 display: none;
             }
-
-            li{
-                a{
-                    &:hover{
-                        opacity: 0.6;
-                    }
-                }
-            }
         }
 
-        .toggle{
+
+        .toggle {
             background: url(https://i.ibb.co/HrfVRcx/menu.png);
-            @include bgImage(45px, 45px, center, no-repeat, auto, 25px);
+            @include bgImage(center, no-repeat, 25px, 45px, 45px);
             cursor: pointer;
             z-index: 20;
-            border-radius: 10px;
             display: none;
 
-            @include breakpoint(lg){
+            @include breakpoint(lg) {
                 display: block;
             }
-
-            @include breakpoint(sm){
-                width: 35px;
-                height: 35px;
-                background-size: 20px;
-            }
-          
         }
     }
 
-    .hidden{
-        display: none;
-    }
 
-    .hamburger-menu{
+    .hamburger-menu {
+        background: linear-gradient(45deg, $secondaryColor 0%, $primaryColor 100%);
         @include positioning(fixed, 0%, 0%, auto, auto);
-        height: 100vh;
         z-index: 15;
         animation: moveInFromLeft 1s;
-        
 
-        ul{
-            @include positioning(absolute, 50%, auto, auto, 50%);
+        @media(min-width:992px) {
+            display: none;
+        }
+
+        &.hidden {
+            display: none;
+        }
+
+        ul {
+            @include positioning(absolute, 50%, auto, auto, 50%, 100%, auto);
             transform: translate(-50%, -50%);
 
-            li{
+            li {
                 font-size: 1.5rem;
+                animation: moveInFromLeft 2s;
 
-                @include breakpoint(sm){
-                    font-size: 1.2rem;
+                @include breakpoint(sm) {
+                    font-size: 1rem;
                 }
-            }
 
-            .social{
+                &:nth-child(1) {
+                    animation-delay: 100ms;
+                }
 
-                a{
-                    i{ 
-                        @include icons; 
-                    }
+                &:nth-child(2) {
+                    animation-delay: 150ms;
+                }
+
+                &:nth-child(3) {
+                    animation-delay: 200ms;
+                }
+
+                &:nth-child(4) {
+                    animation-delay: 250ms;
+                }
+
+                &:nth-child(5) {
+                    animation-delay: 300ms;
                 }
             }
         }

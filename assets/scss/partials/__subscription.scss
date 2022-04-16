@@ -1,41 +1,39 @@
-@import '../variables';
-@import '../mixins';
+.subscription {
+    background: linear-gradient(45deg, $secondaryColor 0%, $primaryColor 100%);
 
+    &-content {
+        @include grid(4, 15px);
 
-/*-----------------------------------------
-SUBSCRIPTION SECTION
-------------------------------------------*/
-.subscription{
-
-    &-content{
-        @include grid(4,15px);
-
-        @include breakpoint(lg){
-            grid-template-columns:repeat(1,1fr);
+        @include breakpoint(lg) {
+            grid-template-columns: repeat(2, 1fr);
         }
 
-        &-card{
+        @include breakpoint(md) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+
+        &-card {
             height: 100%;
 
-           &:first-child{
-               @include flex(center,flex-start,column,nowrap);
+            &:first-child {
+                @include flex(center, flex-start, column);
 
-               .sub-logo{
-                   font-size: 2rem;
-               }
-           }
+                .sub-logo {
+                    font-size: 2rem;
+                }
+            }
 
-           h3{
-               font-size: 1.3rem;
-           }
+            h3 {
+                font-size: 1.5rem;
+            }
 
-           .subscription-social{
-
-            i{
-                @include icons($secondaryColor);
-                
-               }
-            }   
+            ul {
+                li {
+                    font-size: 1.1rem;
+                    font-weight: 500;
+                }
+            }
         }
     }
 }

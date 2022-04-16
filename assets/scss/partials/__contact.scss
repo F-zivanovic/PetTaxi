@@ -1,63 +1,97 @@
-@import '../variables';
-@import '../mixins';
+.contact {
 
-/*-----------------------------------------
-CONTACT SECTION
-------------------------------------------*/
-.contact{
+  &-content {
 
-    &-content{
-  
-        @include flex(space-between,center,row,nowrap);
-    
-        @media(max-width:992px){
-            flex-direction:column;
-        }
-    
-        .contact-info{
-             flex: 1;
+    @include flex(space-between, center);
 
-            &-item{
-                
-                i{
-                  @include icons;
-                }
-            }
-        }
-        
-        form{
-    
-            flex: 2;
-
-            @media(max-width:576px){
-                width: 100%;
-            }
-
-          .form-control{
-            margin-top: 10px;
-            padding: 15px;
-            text-transform: uppercase;
-            font-size: 1rem;
-            font-weight: 600;
-            border-radius: 5px;
-            border: none;
-            outline: none;
-            border: 2px solid $primaryColor
-            
-          }
-
-          .form-group{
-              @include flex(space-between,center,row,nowrap);
-
-              @include breakpoint(sm){
-                flex-direction: column;
-              }
-
-              input{
-                  flex: 0 0 48%;
-              }  
-        
-            }
-        }   
+    @include breakpoint(lg) {
+      flex-direction: column;
     }
+
+
+    .contact-info {
+      flex: 1;
+
+      @include breakpoint(lg) {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+      }
+
+      @include breakpoint(md) {
+        display: flex;
+        flex-direction: column;
+      }
+
+      &-item {
+
+        i {
+          @include icons;
+        }
+      }
+    }
+
+    form {
+
+      flex: 2;
+
+      @include breakpoint(sm) {
+        width: 100%;
+      }
+
+      .form-control {
+        margin-top: 10px;
+        padding: 15px;
+        text-transform: uppercase;
+        font-size: 1rem;
+        font-weight: 600;
+        border-radius: 5px;
+        border: none;
+        outline: none;
+        border: 2px solid $primaryColor;
+
+        @include breakpoint(sm) {
+          font-size: 0.7rem;
+          padding: 10px
+        }
+
+      }
+
+      .form-group {
+        @include flex(space-between, center);
+
+        @include breakpoint(sm) {
+          flex-direction: column;
+        }
+
+        input {
+          flex: 0 0 48%;
+        }
+
+      }
+
+      .sbm-btn {
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: 600;
+        letter-spacing: 1px;
+        background: linear-gradient(45deg, $secondaryColor 0%, $primaryColor 100%);
+        padding: 15px 30px;
+        border: none;
+        border-radius: 10px;
+        border: 2px solid white;
+
+        &:hover {
+          background: linear-gradient(45deg, $primaryColor 0%, $secondaryColor 100%);
+          transition: $transition;
+          cursor: pointer;
+        }
+
+        @include breakpoint(sm) {
+          padding: 10px 15px;
+          font-size: 0.7rem;
+        }
+      }
+    }
+  }
 }

@@ -1,13 +1,11 @@
-@import '../variables';
-
-*{
+* {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
     scroll-behavior: smooth;
 }
 
-body{
+body {
     font-family: $bodyFont;
     line-height: 1.5;
     font-size: $fontSize;
@@ -19,62 +17,113 @@ h2,
 h3,
 h4,
 h5,
-h6{
+h6 {
     color: $headingsColor;
     font-weight: 700;
 }
 
-img{
+img {
     width: 100%;
 }
 
-a{
+ul {
+    list-style-type: none;
+}
+
+section {
+    padding: $padding;
+}
+
+
+a {
     text-decoration: none;
     color: $white;
-    
-    &:hover{
+    transition: 200ms;
+
+    &:hover {
         transition: $transition;
         cursor: pointer;
         opacity: 0.75;
     }
 }
 
-ul{
-    list-style-type: none;
-}
 
-section{
-    padding: $padding;
-}
-
-p{
+p {
     font-size: 1rem;
 
-    @media(max-width:576px){
+    @include breakpoint(sm) {
         font-size: 0.8rem;
     }
 }
 
-button{
-  
-        color: #fff;
-        text-transform: uppercase;
-        font-weight: 600;
-        letter-spacing: 1px;
-        background:linear-gradient(45deg, $secondaryColor 0%, $primaryColor 100%);
-        padding: 15px 30px;
-        border: none;
-        border-radius: 10px;
-        border: 2px solid white; 
-    
-        &:hover{
-            background:linear-gradient(45deg, $primaryColor 0%, $secondaryColor 100%);
-            transition: $transition;
-            cursor: pointer;
-        }
-    
-        @media(max-width:576px){
-            padding: 10px 15px;
-            font-size: 0.8rem;
-        }
+.w-100 {
+    width: 100%;
 }
+
+.container {
+    width: 90%;
+    margin: 0px auto;
+
+    @include breakpoint(md) {
+        width: 80%;
+        margin: 0px auto;
+    }
+}
+
+button {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    background: linear-gradient(45deg, $secondaryColor 0%, $primaryColor 100%);
+    padding: 15px 25px;
+    border: none;
+    border-radius: 5px;
+    border: 2px solid white;
+    font-size: 0.9rem;
+
+    &:hover {
+        background: linear-gradient(45deg, $primaryColor 0%, $secondaryColor 100%);
+        transition: $transition;
+        cursor: pointer;
+    }
+
+    @include breakpoint(sm) {
+        padding: 10px 15px;
+        font-size: 0.8rem;
+    }
+}
+
+.section-tittle {
+    font-size: 2rem;
+    color: $black;
+
+    &::after {
+        display: block;
+        content: "";
+        background: linear-gradient(45deg, #207dff 0%, #00bd55 100%);
+        width: 150px;
+        height: 5px;
+        margin: 10px 0px;
+
+        @include breakpoint(sm) {
+            width: 100px;
+        }
+    }
+
+    @include breakpoint(sm) {
+        font-size: 1.3rem;
+    }
+}
+
+.section-subtittle {
+    font-size: 1.5rem;
+
+    @include breakpoint(sm) {
+        font-size: 1rem;
+    }
+}
+
+// .card {
+//     @include positioning(fixed, auto, 10px, 10px, auto, auto, auto);
+//     padding: 15px;
+// }

@@ -1,27 +1,18 @@
 const toggle = document.querySelector('.toggle');
 const hamburgerMenu = document.querySelector('.hamburger-menu');
-const navLink = document.querySelector('.nav-links');
-const navLink1 = document.querySelector('.nav-links1');
-const navLink2 = document.querySelector('.nav-links2');
-const navLink3 = document.querySelector('.nav-links3');
-const navLink4 = document.querySelector('.nav-links4');
 
 
 // Close hamburger menu when click on link
-navLink.addEventListener('click', closeHamburgerMenu);
-navLink1.addEventListener('click', closeHamburgerMenu);
-navLink2.addEventListener('click', closeHamburgerMenu);
-navLink3.addEventListener('click', closeHamburgerMenu);
-navLink4.addEventListener('click', closeHamburgerMenu);
+let linkovi = document.querySelectorAll('#list > li');
 
-function closeHamburgerMenu() {
-    hamburgerMenu.classList.add('hidden');
+for (link of linkovi) {
+    link.addEventListener('click', () => {
+        hamburgerMenu.classList.add('hidden');
+    });
 }
 
-// Open hamburger menu
-toggle.addEventListener('click', openHamburgerMenu);
 
-function openHamburgerMenu() {
+// Open hamburger menu when click on it
+toggle.addEventListener('click', () => {
     hamburgerMenu.classList.toggle('hidden');
-}
-
+});

@@ -1,31 +1,28 @@
-@import '../variables';
-@import '../mixins';
-@import '../animations';
+header {
+
+    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url('../img/header-bg.jpg');
+    @include bgImage(center, no-repeat, cover, 100vh, 100%);
+    @include flex(center, center, column);
 
 
-/*-----------------------------------------
-HEADER SECTION 
-------------------------------------------*/ 
-header{
+    .header-content {
+        @include flex(center, center, column);
+        animation: moveInFromBottom 1.2s ease-in-out;
+        margin: 0px 10px;
 
-    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url('../img/header-bg.jpg');
-    @include bgImage(90vh, 100%, center, no-repeat, auto, cover);
-    @include flex(center,center,column,nowrap);
-   
+        h1 {
+            font-size: 3rem;
 
-    .header-content{
-        @include flex(center,center,column,nowrap);
-        animation: moveInLeft 1.2s ease-in-out;
-
-        h1{
-            font-size: 3.5rem;
-
-            @include breakpoint(md){
+            @include breakpoint(md) {
                 font-size: 2rem;
             }
 
-            @include breakpoint(sm){
+            @include breakpoint(sm) {
                 font-size: 1.5rem;
+            }
+
+            @include breakpoint(xs) {
+                font-size: 1.2rem;
             }
         }
     }

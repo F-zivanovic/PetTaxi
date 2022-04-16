@@ -1,7 +1,14 @@
 /*-----------------------------------------
 EXTERNAL FILES
 ------------------------------------------*/
+@import 'variables';
+@import 'mixins';
 @import 'utilities';
+@import 'animations';
+
+/*-----------------------------------------
+PARTIALS
+------------------------------------------*/
 @import 'partials/__global';
 @import 'partials/__nav';
 @import 'partials/__header';
@@ -10,10 +17,3 @@ EXTERNAL FILES
 @import 'partials/__gallery';
 @import 'partials/__contact';
 @import 'partials/__subscription';
-@import 'partials/__card';
-
-
-
-
-  
-

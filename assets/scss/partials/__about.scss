@@ -1,63 +1,59 @@
-@import '../variables';
-@import '../mixins';
+.about {
 
-/*-----------------------------------------
-ABOUT SECTION 
-------------------------------------------*/
-.about{
-  
-    &-content{
-        @include flex(center,space-around,row,wrap);
+    &-content {
+        @include flex(center, space-around, row, wrap);
 
-        article{
+        article {
 
-            ul{
-                li{
+            ul {
+                li {
                     font-size: 1.2rem;
 
-                    @include breakpoint(sm){
+                    @include breakpoint(sm) {
                         font-size: 0.8rem;
                     }
                 }
             }
 
-            &:first-child{
-              
-                @include flex(center,center,column,nowrap);
 
-                @include breakpoint(lg){
-                    order: 10;
+            &:first-child {
+                @include flex(center, center, column);
+
+                @include breakpoint(lg) {
+                    margin-top: 25px;
                 }
-                
             }
 
-            .about-icons{
 
-                 i{
-                     @include icons;
-                 }
+            .about-icons {
 
-                 span{
-                     font-size: 1rem;
+                i {
+                    @include icons;
+                }
 
-                     @include breakpoint(sm){
+                span {
+                    font-size: 1rem;
+
+                    @include breakpoint(sm) {
                         font-size: 0.8rem;
                     }
-                 }
+                }
             }
 
-            img{
+
+            img {
                 height: 600px;
+                object-fit: cover;
+                resize: both;
 
-                @media(max-width:992px){
-                    order: 3;
-                }
-
-                @media(max-width:576px){
+                @include breakpoint(sm) {
                     height: 400px;
                 }
-            }
 
+                @include breakpoint(xs) {
+                    height: 350px;
+                }
+            }
         }
     }
-} 
+}
