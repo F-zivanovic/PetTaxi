@@ -1,29 +1,29 @@
-.card {
-    @include positioning(fixed, auto, 15px, 15px, auto, auto, auto);
-    background: linear-gradient(45deg, #207dff 0%, #00bd55 100%);
-    font-size: 0.9rem;
-    border: 2px solid white;
-    padding: 10px 15px;
+// .card {
+//     @include positioning(fixed, auto, 15px, 15px, auto, auto, auto);
+//     background: linear-gradient(45deg, #207dff 0%, #00bd55 100%);
+//     font-size: 0.9rem;
+//     border: 2px solid white;
+//     padding: 10px 15px;
 
 
-    &:hover {
-        cursor: pointer;
-        opacity: 0.75;
-        transition: $transition;
-        background: linear-gradient(45deg, #00bd55 0%, #207dff 100%);
-    }
-}
+//     &:hover {
+//         cursor: pointer;
+//         opacity: 0.75;
+//         transition: $transition;
+//         background: linear-gradient(45deg, #00bd55 0%, #207dff 100%);
+//     }
+// }
 
-.card-info {
-    @include positioning(fixed, auto, 15px, 15px, auto, auto, auto);
-    transition: $transition;
+// .card-info {
+//     @include positioning(fixed, auto, 15px, 15px, auto, auto, auto);
+//     transition: $transition;
 
-    .gg-close-r {
-        @include positioning(absolute, 10px, 10px, auto, auto, auto, auto);
-        cursor: pointer;
-    }
+//     .gg-close-r {
+//         @include positioning(absolute, 10px, 10px, auto, auto, auto, auto);
+//         cursor: pointer;
+//     }
 
-    &.active {
-        right: 15px;
-    }
-}
+//     &.active {
+//         right: 15px;
+//     }
+// }

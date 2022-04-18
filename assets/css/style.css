@@ -302,22 +302,21 @@ p {
       width: 80%;
       margin: 0px auto; } }
 
-button {
+button, .contact-content form .button-group .sbm-btn {
   color: #fff;
   text-transform: uppercase;
   font-weight: 700;
   background: linear-gradient(45deg, #178ed0 0%, #00bd56 100%);
-  padding: 15px 25px;
-  border: none;
+  padding: 15px 20px;
   border-radius: 5px;
   border: 2px solid white;
   font-size: 0.9rem; }
-  button:hover {
+  button:hover, .contact-content form .button-group .sbm-btn:hover {
     background: linear-gradient(45deg, #00bd56 0%, #178ed0 100%);
     transition: ease-in-out 0.5s;
     cursor: pointer; }
   @media (max-width: 576px) {
-    button {
+    button, .contact-content form .button-group .sbm-btn {
       padding: 10px 15px;
       font-size: 0.8rem; } }
 
@@ -355,11 +354,11 @@ nav {
     align-items: center;
     flex-direction: row;
     flex-wrap: nowrap; }
-    nav .nav-content .logo {
+    nav .nav-content .nav-logo {
       font-size: 2rem;
       letter-spacing: 1px; }
       @media (max-width: 576px) {
-        nav .nav-content .logo {
+        nav .nav-content .nav-logo {
           font-size: 1.5rem; } }
     nav .nav-content ul {
       display: flex;
@@ -485,16 +484,17 @@ header {
     font-size: 1.4rem;
     text-align: center;
     background-color: #00bd56;
-    color: #fff; }
+    color: #fff;
+    transition: 200ms; }
     .about-content article .about-icons i:hover {
       transform: rotate(360deg);
       transition-duration: 0.8s; }
     @media (max-width: 576px) {
       .about-content article .about-icons i {
-        width: 35px;
-        height: 35px;
+        width: 40px;
+        height: 40px;
         border-radius: 50%;
-        line-height: 35px;
+        line-height: 40px;
         font-size: 1rem; } }
   .about-content article .about-icons span {
     font-size: 1rem; }
@@ -532,10 +532,10 @@ header {
     @media (max-width: 992px) {
       .services-content {
         grid-template-columns: repeat(1, 1fr); } }
-    .services-content article h4 {
+    .services-content article h5 {
       font-size: 1.4rem; }
       @media (max-width: 576px) {
-        .services-content article h4 {
+        .services-content article h5 {
           font-size: 1rem; } }
     .services-content article i {
       width: 55px;
@@ -545,16 +545,17 @@ header {
       font-size: 1.4rem;
       text-align: center;
       background-color: #00bd56;
-      color: #fff; }
+      color: #fff;
+      transition: 200ms; }
       .services-content article i:hover {
         transform: rotate(360deg);
         transition-duration: 0.8s; }
       @media (max-width: 576px) {
         .services-content article i {
-          width: 35px;
-          height: 35px;
+          width: 40px;
+          height: 40px;
           border-radius: 50%;
-          line-height: 35px;
+          line-height: 40px;
           font-size: 1rem; } }
 
 .gallery-content {
@@ -623,16 +624,17 @@ header {
       font-size: 1.4rem;
       text-align: center;
       background-color: #00bd56;
-      color: #fff; }
+      color: #fff;
+      transition: 200ms; }
       .contact-content .contact-info-item i:hover {
         transform: rotate(360deg);
         transition-duration: 0.8s; }
       @media (max-width: 576px) {
         .contact-content .contact-info-item i {
-          width: 35px;
-          height: 35px;
+          width: 40px;
+          height: 40px;
           border-radius: 50%;
-          line-height: 35px;
+          line-height: 40px;
           font-size: 1rem; } }
   .contact-content form {
     flex: 2; }
@@ -642,7 +644,6 @@ header {
     .contact-content form .form-control {
       margin-top: 10px;
       padding: 15px;
-      text-transform: uppercase;
       font-size: 1rem;
       font-weight: 600;
       border-radius: 5px;
@@ -664,24 +665,15 @@ header {
           flex-direction: column; } }
       .contact-content form .form-group input {
         flex: 0 0 48%; }
-    .contact-content form .sbm-btn {
-      color: #fff;
-      text-transform: uppercase;
-      font-weight: 600;
-      letter-spacing: 1px;
-      background: linear-gradient(45deg, #178ed0 0%, #00bd56 100%);
-      padding: 15px 30px;
-      border: none;
-      border-radius: 10px;
-      border: 2px solid white; }
-      .contact-content form .sbm-btn:hover {
-        background: linear-gradient(45deg, #00bd56 0%, #178ed0 100%);
-        transition: ease-in-out 0.5s;
-        cursor: pointer; }
-      @media (max-width: 576px) {
-        .contact-content form .sbm-btn {
-          padding: 10px 15px;
-          font-size: 0.7rem; } }
+    .contact-content form .button-group {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      margin-top: 10px; }
+      .contact-content form .button-group .sbm-btn {
+        margin-right: 10px; }
 
 .subscription {
   background: linear-gradient(45deg, #178ed0 0%, #00bd56 100%); }
@@ -705,12 +697,25 @@ header {
         align-items: flex-start;
         flex-direction: column;
         flex-wrap: nowrap; }
+        @media (max-width: 992px) {
+          .subscription-content-card:first-child {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            flex-direction: row;
+            flex-wrap: nowrap; } }
         .subscription-content-card:first-child .sub-logo {
           font-size: 2rem; }
       .subscription-content-card h3 {
         font-size: 1.5rem; }
+        @media (max-width: 576px) {
+          .subscription-content-card h3 {
+            font-size: 1.3rem; } }
       .subscription-content-card ul li {
-        font-size: 1.1rem;
+        font-size: 1rem;
         font-weight: 500; }
+        @media (max-width: 576px) {
+          .subscription-content-card ul li {
+            font-size: 0.8rem; } }
 
 /*# sourceMappingURL=style.css.map */

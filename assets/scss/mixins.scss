@@ -74,6 +74,7 @@
     text-align: center;
     background-color: $bg;
     color: $white;
+    transition: 200ms;
 
     &:hover {
         transform: rotate(360deg);
@@ -81,10 +82,10 @@
     }
 
     @include breakpoint(sm) {
-        width: 35px;
-        height: 35px;
+        width: 40px;
+        height: 40px;
         border-radius: 50%;
-        line-height: 35px;
+        line-height: 40px;
         font-size: 1rem;
     }
 }

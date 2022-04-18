@@ -7,7 +7,7 @@ nav {
     .nav-content {
         @include flex(space-between, center);
 
-        .logo {
+        .nav-logo {
             font-size: 2rem;
             letter-spacing: 1px;
 

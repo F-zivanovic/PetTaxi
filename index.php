@@ -38,7 +38,7 @@
     <!-- Navbar section -->
     <nav class="bg-linear w-100">
         <div class="nav-content container">
-            <a href="index.php" class="logo fw-800"><strong>PetTaxi</strong></a>
+            <a href="index.php" class="nav-logo fw-800"><strong>PetTaxi</strong></a>
             <ul class="fw-bold text-uppercase">
                 <li class="mr-3"><a href="index.html">Početna</a></li>
                 <li class="mr-3"><a href="#about">O nama</a></li>
@@ -69,7 +69,9 @@
     <header class="text-center">
         <div class="header-content">
             <h1 class="text-white fw-800 text-uppercase">Najudobniji prevoz Vaših ljubimaca</h1>
-            <a href="tel:+381628143648 " class="mt-2"> <button type="button">Pozovite sada</button></a>
+            <button type="button">
+                <a href="tel:+381628143648 " class="mt-2">Pozovite sada</a>
+            </button>
         </div>
     </header>
     <!-- Header banner section -->
@@ -135,37 +137,37 @@
             <article class="mt-4">
                 <i class="fas fa-phone-alt"></i>
                 <i class="fas fa-comments"></i>
-                <h4 class="text-white">Zakažite termin</h4>
+                <h5 class="text-white">Zakažite termin</h5>
                 <p class="text-white fw-600">Pozivom na broj telefona ili popunjavanjem forme na sajtu</p>
             </article>
             <article class="mt-4">
                 <i class="fas fa-calendar-alt"></i>
                 <i class="fas fa-clock"></i>
-                <h4 class="text-white">Potvrda termina</h4>
+                <h5 class="text-white">Potvrda termina</h5>
                 <p class="text-white fw-600">Ako je termin slobodan dobijate obaveštenje</p>
             </article>
             <article class="mt-4">
                 <i class="fas fa-car"></i>
                 <i class="fas fa-angle-double-right"></i>
-                <h4 class="text-white">Početak vožnje</h4>
+                <h5 class="text-white">Početak vožnje</h5>
                 <p class="text-white fw-600">Vozač dolazi na unapred udogovorenu adresu i vreme</p>
             </article>
             <article class="mt-4">
                 <i class="fas fa-exclamation"></i>
                 <i class="fas fa-bone"></i>
-                <h4 class="text-white">Dolazak na adresu</h4>
+                <h5 class="text-white">Dolazak na adresu</h5>
                 <p class="text-white fw-600">Na brz i bezbedan način dolazite do krajnje lokacije</p>
             </article>
             <article class="mt-4">
                 <i class="fas fa-angle-double-left"></i>
                 <i class="fas fa-exclamation"></i>
-                <h4 class="text-white">Zavrsetak vožnje</h4>
+                <h5 class="text-white">Zavrsetak vožnje</h5>
                 <p class="text-white fw-600">Povratak na početnu lokaciju Vašeg ljubimca</p>
             </article>
             <article class="mt-4">
                 <i class="fas fa-money-bill-wave"></i>
                 <i class="fas fa-smile"></i>
-                <h4 class="text-white">Naplata vožnje</h4>
+                <h5 class="text-white">Naplata vožnje</h5>
                 <p class="text-white fw-600">Naplata se vrši na kraju vožnje</p>
             </article>
         </div>
@@ -184,29 +186,35 @@
             <form action="assets/php/reachout.php" method="POST" name="contact">
 
                 <div class="form-group w-100">
-                    <input name="name" type="text" placeholder="Vaše ime" required class="form-control w-100">
-                    <input name="email" type="email" placeholder="Email Adresa" required class="form-control w-100">
+                    <input name="name" type="text" placeholder="Vaše ime" required class="form-control w-100" id="name">
+                    <input name="email" type="email" placeholder="Email Adresa" required class="form-control w-100"
+                        id="email">
                 </div>
 
                 <div class="form-group w-100">
                     <input name="date" type="text" placeholder="Datum polaska" onfocus="(this.type='date')" required
-                        class="form-control w-100">
+                        class="form-control w-100" id="date">
                     <input name="time" type="text" placeholder="Vreme polaska" onfocus="(this.type='time')" required
-                        class="form-control w-100">
+                        class="form-control w-100" id="time">
                 </div>
 
                 <div class="form-group w-100">
                     <input name="location_a" type="text" placeholder="Početna lokacija" required
-                        class="form-control w-100">
+                        class="form-control w-100" id="location_a">
                     <input name="location_b" type="text" placeholder="Krajnja lokacija" required
-                        class="form-control w-100">
+                        class="form-control w-100" id="location_b">
                 </div>
 
                 <input name="contact_phone" type="number" placeholder="Broj telefona" required
-                    class="form-control w-100">
-                <textarea name="comment" cols="30" rows="10" class="form-control w-100"
-                    placeholder="Napomena"></textarea>
-                <input type="submit" value="Zakaži Voznju" class="form-control sbm-btn">
+                    class="form-control w-100" id="phone">
+                <textarea name="comment" cols="30" rows="10" class="form-control w-100" placeholder="Napomena"
+                    id="comment"></textarea>
+
+                <div class="button-group">
+                    <input type="submit" value="Zakaži Voznju" class="sbm-btn">
+                    <button type="button" id="reset-btn">Resetuj formu</button>
+                </div>
+
             </form>
 
             <div class="contact-info mt-4">
@@ -265,7 +273,7 @@
 
 
     <!-- Subscription section -->
-    <section class="subscription bg-linear" id="contact">
+    <section class="subscription bg-linear">
         <div class="subscription-content container">
 
             <div class="subscription-content-card">
@@ -291,17 +299,6 @@
             </div>
 
             <div class="subscription-content-card">
-                <h3 class="pb-2 text-white">Kontakt</h3>
-                <ul class="text-white">
-                    <li>+381 62 81 43 648</li>
-                    <li class="pt-1">pettaxi@prevozljubimaca.rs
-                    </li>
-                    <li class="pt-1">Balkanska 4</li>
-                    <li class="pt-1">Srbija, Beograd</li>
-                </ul>
-            </div>
-
-            <div class="subscription-content-card">
                 <h3 class="pb-2 text-white">Radno vreme</h3>
                 <ul class="text-white">
                     <li>Pon: 07:00 - 22:00</li>
@@ -313,6 +310,18 @@
                     <li class="pt-1">Ned: 07:00 - 22:00</li>
                 </ul>
             </div>
+
+            <div class="subscription-content-card">
+                <h3 class="pb-2 text-white">Kontakt</h3>
+                <ul class="text-white">
+                    <li>+381 62 81 43 648</li>
+                    <li class="pt-1">pettaxi@prevozljubimaca.rs
+                    </li>
+                    <li class="pt-1"> Balkanska 4</li>
+                    <li class="pt-1">Srbija, Beograd</li>
+                </ul>
+            </div>
+
         </div>
 
         <div class="subscription-copyright mt-4">
