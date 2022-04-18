@@ -1,23 +1,27 @@
 # Prevoz ljubimaca - PetTaxi
 
-This is an SASS project, <a href="https://prevozljubimaca.rs/">Live Preview</a> 
+ <a href="https://prevozljubimaca.rs/">Live Preview</a> 
 
 ### Key Features:
-- SASS
-- HTML5
-- JS
-- CSS Flexbox layout
-- CSS grid layout
-- Position
+- Mixins
+- Nesting
+- Partials
+- Maps
+- Variables
+- CSS Flexbox/Grid layout
+- Position layout
 - Animations
+- 3D Trnasformations
 - Semantic elements
 - 100% responsive
 - Cross browser compatibility
 - Navbar navigation
-- Open and close hamburger menu
+- Functional hamburger menu
+- Admin panel
 - Functional contact form
 - Connection to the database
 - Enrollment in the database
+
 
 ### Libraries & Plugins:
 - Font awesome
