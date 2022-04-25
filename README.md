@@ -19,6 +19,8 @@
 - Functional hamburger menu
 - Admin panel
 - Functional contact form
+- Validate contact form
+- Reset button for contact form
 - Connection to the database
 - Enrollment in the database
 
