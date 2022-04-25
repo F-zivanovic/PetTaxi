@@ -87,7 +87,7 @@ button {
     }
 
     @include breakpoint(sm) {
-        padding: 10px 15px;
+        padding: 10px;
         font-size: 0.8rem;
     }
 }
@@ -121,8 +121,3 @@ button {
         font-size: 1rem;
     }
 }
-
-// .card {
-//     @include positioning(fixed, auto, 10px, 10px, auto, auto, auto);
-//     padding: 15px;
-// }

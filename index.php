@@ -38,9 +38,9 @@
     <!-- Navbar section -->
     <nav class="bg-linear w-100">
         <div class="nav-content container">
-            <a href="index.php" class="nav-logo fw-800"><strong>PetTaxi</strong></a>
+            <a href="index.php" class="logo fw-800"><strong>PetTaxi</strong></a>
             <ul class="fw-bold text-uppercase">
-                <li class="mr-3"><a href="index.html">Početna</a></li>
+                <li class="mr-3"><a href="index.php">Početna</a></li>
                 <li class="mr-3"><a href="#about">O nama</a></li>
                 <li class="mr-3"><a href="#services">Usluge</a></li>
                 <li class="mr-3"><a href="#contact">Kontakt</a></li>
@@ -70,7 +70,7 @@
         <div class="header-content">
             <h1 class="text-white fw-800 text-uppercase">Najudobniji prevoz Vaših ljubimaca</h1>
             <button type="button">
-                <a href="tel:+381628143648 " class="mt-2">Pozovite sada</a>
+                <a href="tel:+381628143648">Pozovite sada</a>
             </button>
         </div>
     </header>
@@ -92,7 +92,7 @@
             Srbiji.
         </p>
 
-        <div class="about-content">
+        <div class="about-content mt-3">
             <article>
                 <ul class="mt-3">
                     <li><i class="fas fa-angle-right mr-2 text-primary"></i>Prevoz do novih vlasnika </li>
@@ -210,11 +210,8 @@
                 <textarea name="comment" cols="30" rows="10" class="form-control w-100" placeholder="Napomena"
                     id="comment"></textarea>
 
-                <div class="button-group">
-                    <input type="submit" value="Zakaži Voznju" class="sbm-btn">
-                    <button type="button" id="reset-btn">Resetuj formu</button>
-                </div>
-
+                <input type="submit" value="Zakaži Voznju" class="sbm-btn">
+                <button type="button" id="reset-btn">Resetuj formu</button>
             </form>
 
             <div class="contact-info mt-4">
@@ -330,13 +327,6 @@
         </div>
     </section>
     <!-- End Subscription section -->
-
-
-    <!-- Right bottom corner -->
-    <!-- <a href="tel:+381628143648 " class="fw-bold text-uppercase">
-        <button class="card" type="button"> Pozovite</button>
-    </a> -->
-    <!-- End right bottom corner -->
 
 
     <!-- Custom JS -->

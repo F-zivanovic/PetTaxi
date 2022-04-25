@@ -19,16 +19,15 @@
       }
 
       @include breakpoint(md) {
-        display: flex;
-        flex-direction: column;
+        display: none;
       }
 
       &-item {
-
         i {
           @include icons;
         }
       }
+
     }
 
     form {
@@ -51,7 +50,7 @@
 
         @include breakpoint(sm) {
           font-size: 0.7rem;
-          padding: 10px
+          padding: 15px 10px;
         }
 
       }
@@ -68,16 +67,8 @@
         }
       }
 
-      .button-group {
-
-        @include flex(center, center);
-        margin-top: 10px;
-
-        .sbm-btn {
-          @extend button;
-          margin-right: 10px;
-        }
-
+      .sbm-btn {
+        @extend button;
       }
     }
   }

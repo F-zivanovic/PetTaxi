@@ -302,7 +302,7 @@ p {
       width: 80%;
       margin: 0px auto; } }
 
-button, .contact-content form .button-group .sbm-btn {
+button, .contact-content form .sbm-btn {
   color: #fff;
   text-transform: uppercase;
   font-weight: 700;
@@ -311,13 +311,13 @@ button, .contact-content form .button-group .sbm-btn {
   border-radius: 5px;
   border: 2px solid white;
   font-size: 0.9rem; }
-  button:hover, .contact-content form .button-group .sbm-btn:hover {
+  button:hover, .contact-content form .sbm-btn:hover {
     background: linear-gradient(45deg, #00bd56 0%, #178ed0 100%);
     transition: ease-in-out 0.5s;
     cursor: pointer; }
   @media (max-width: 576px) {
-    button, .contact-content form .button-group .sbm-btn {
-      padding: 10px 15px;
+    button, .contact-content form .sbm-btn {
+      padding: 10px;
       font-size: 0.8rem; } }
 
 .section-tittle {
@@ -348,18 +348,27 @@ nav {
   background: linear-gradient(45deg, #178ed0 0%, #00bd56 100%);
   position: fixed;
   z-index: 15; }
+  @media (max-width: 768px) {
+    nav {
+      padding: 10px 0px; } }
+  @media (max-width: 576px) {
+    nav {
+      padding: 5px 0px; } }
   nav .nav-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
     flex-wrap: nowrap; }
-    nav .nav-content .nav-logo {
-      font-size: 2rem;
+    nav .nav-content .logo {
+      font-size: 1.8rem;
       letter-spacing: 1px; }
-      @media (max-width: 576px) {
-        nav .nav-content .nav-logo {
+      @media (max-width: 768px) {
+        nav .nav-content .logo {
           font-size: 1.5rem; } }
+      @media (max-width: 576px) {
+        nav .nav-content .logo {
+          font-size: 1rem; } }
     nav .nav-content ul {
       display: flex;
       justify-content: center;
@@ -382,6 +391,9 @@ nav {
       @media (max-width: 992px) {
         nav .nav-content .toggle {
           display: block; } }
+      @media (max-width: 576px) {
+        nav .nav-content .toggle {
+          background-size: 20px; } }
   nav .hamburger-menu {
     background: linear-gradient(45deg, #178ed0 0%, #00bd56 100%);
     position: fixed;
@@ -412,7 +424,7 @@ nav {
         animation: moveInFromLeft 2s; }
         @media (max-width: 576px) {
           nav .hamburger-menu ul li {
-            font-size: 1rem; } }
+            font-size: 1.1rem; } }
         nav .hamburger-menu ul li:nth-child(1) {
           animation-delay: 100ms; }
         nav .hamburger-menu ul li:nth-child(2) {
@@ -442,10 +454,11 @@ header {
     align-items: center;
     flex-direction: column;
     flex-wrap: nowrap;
-    animation: moveInFromBottom 1.2s ease-in-out;
+    animation: moveInFromBottom 1.3s ease-in-out;
     margin: 0px 10px; }
     header .header-content h1 {
-      font-size: 3rem; }
+      font-size: 3rem;
+      margin-bottom: 10px; }
       @media (max-width: 768px) {
         header .header-content h1 {
           font-size: 2rem; } }
@@ -454,7 +467,7 @@ header {
           font-size: 1.5rem; } }
       @media (max-width: 350px) {
         header .header-content h1 {
-          font-size: 1.2rem; } }
+          font-size: 1rem; } }
 
 .about-content {
   display: flex;
@@ -491,10 +504,10 @@ header {
       transition-duration: 0.8s; }
     @media (max-width: 576px) {
       .about-content article .about-icons i {
-        width: 40px;
-        height: 40px;
+        width: 45px;
+        height: 45px;
         border-radius: 50%;
-        line-height: 40px;
+        line-height: 45px;
         font-size: 1rem; } }
   .about-content article .about-icons span {
     font-size: 1rem; }
@@ -536,7 +549,7 @@ header {
       font-size: 1.4rem; }
       @media (max-width: 576px) {
         .services-content article h5 {
-          font-size: 1rem; } }
+          font-size: 1.1rem; } }
     .services-content article i {
       width: 55px;
       height: 55px;
@@ -552,10 +565,10 @@ header {
         transition-duration: 0.8s; }
       @media (max-width: 576px) {
         .services-content article i {
-          width: 40px;
-          height: 40px;
+          width: 45px;
+          height: 45px;
           border-radius: 50%;
-          line-height: 40px;
+          line-height: 45px;
           font-size: 1rem; } }
 
 .gallery-content {
@@ -614,8 +627,7 @@ header {
         width: 100%; } }
     @media (max-width: 768px) {
       .contact-content .contact-info {
-        display: flex;
-        flex-direction: column; } }
+        display: none; } }
     .contact-content .contact-info-item i {
       width: 55px;
       height: 55px;
@@ -631,10 +643,10 @@ header {
         transition-duration: 0.8s; }
       @media (max-width: 576px) {
         .contact-content .contact-info-item i {
-          width: 40px;
-          height: 40px;
+          width: 45px;
+          height: 45px;
           border-radius: 50%;
-          line-height: 40px;
+          line-height: 45px;
           font-size: 1rem; } }
   .contact-content form {
     flex: 2; }
@@ -653,7 +665,7 @@ header {
       @media (max-width: 576px) {
         .contact-content form .form-control {
           font-size: 0.7rem;
-          padding: 10px; } }
+          padding: 15px 10px; } }
     .contact-content form .form-group {
       display: flex;
       justify-content: space-between;
@@ -665,15 +677,6 @@ header {
           flex-direction: column; } }
       .contact-content form .form-group input {
         flex: 0 0 48%; }
-    .contact-content form .button-group {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: row;
-      flex-wrap: nowrap;
-      margin-top: 10px; }
-      .contact-content form .button-group .sbm-btn {
-        margin-right: 10px; }
 
 .subscription {
   background: linear-gradient(45deg, #178ed0 0%, #00bd56 100%); }
@@ -697,13 +700,6 @@ header {
         align-items: flex-start;
         flex-direction: column;
         flex-wrap: nowrap; }
-        @media (max-width: 992px) {
-          .subscription-content-card:first-child {
-            display: flex;
-            justify-content: flex-start;
-            align-items: flex-start;
-            flex-direction: row;
-            flex-wrap: nowrap; } }
         .subscription-content-card:first-child .sub-logo {
           font-size: 2rem; }
       .subscription-content-card h3 {
@@ -716,6 +712,6 @@ header {
         font-weight: 500; }
         @media (max-width: 576px) {
           .subscription-content-card ul li {
-            font-size: 0.8rem; } }
+            font-size: 0.9rem; } }
 
 /*# sourceMappingURL=style.css.map */

@@ -4,15 +4,27 @@ nav {
     position: fixed;
     z-index: 15;
 
+    @include breakpoint(md) {
+        padding: 10px 0px;
+    }
+
+    @include breakpoint(sm) {
+        padding: 5px 0px;
+    }
+
     .nav-content {
         @include flex(space-between, center);
 
-        .nav-logo {
-            font-size: 2rem;
+        .logo {
+            font-size: 1.8rem;
             letter-spacing: 1px;
 
-            @include breakpoint(sm) {
+            @include breakpoint(md) {
                 font-size: 1.5rem;
+            }
+
+            @include breakpoint(sm) {
+                font-size: 1rem;
             }
         }
 
@@ -35,6 +47,10 @@ nav {
 
             @include breakpoint(lg) {
                 display: block;
+            }
+
+            @include breakpoint(sm) {
+                background-size: 20px;
             }
         }
     }
@@ -63,7 +79,7 @@ nav {
                 animation: moveInFromLeft 2s;
 
                 @include breakpoint(sm) {
-                    font-size: 1rem;
+                    font-size: 1.1rem;
                 }
 
                 &:nth-child(1) {
