@@ -61,4 +61,59 @@
             }
         }
     }
+
+
+    &-popup {
+        @include positioning(fixed, 0%, 0%, 0%, 0%);
+        z-index: 100;
+        background: rgba(0, 0, 0, 0.8);
+        display: none;
+        animation: openPopup .5s ease-in;
+
+        &.visible {
+            display: block;
+        }
+
+        i {
+            @include positioning(absolute, 15px, 10px, auto, auto, auto, auto);
+            font-size: 1.5rem;
+            color: white;
+            cursor: pointer;
+
+            @include breakpoint(sm) {
+                font-size: 1.2rem
+            }
+        }
+
+        &-body {
+            @include positioning(relative, 50%, auto, auto, 50%, 90%, 90%);
+            transform: translate(-50%, -50%);
+
+            @media(max-width:1800px) {
+                width: 75%;
+                height: 60%;
+            }
+
+            @include breakpoint(xl) {
+                width: 100%;
+                height: 70%;
+            }
+
+            @include breakpoint(lg) {
+                height: 50%;
+            }
+
+            @include breakpoint(md) {
+                height: auto;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                resize: both;
+            }
+        }
+    }
+
+
 }

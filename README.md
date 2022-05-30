@@ -11,7 +11,7 @@
 - CSS Flexbox/Grid layout
 - Position layout
 - Animations
-- 3D Trnasformations
+- 3D Transformations
 - Semantic elements
 - 100% responsive
 - Cross browser compatibility

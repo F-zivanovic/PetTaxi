@@ -53,3 +53,55 @@ function resetForm() {
     }
 }
 
+
+// Hide gallery popup
+const closeBtn = document.querySelector('.gallery-popup > i');
+closeBtn.addEventListener('click', hidePopup);
+
+function hidePopup() {
+    let popup = document.getElementById('gallery-preview');
+    popup.classList.remove('visible');
+}
+
+// Show gallery popup
+function init() {
+    bindGalleryItems();
+    bindKeyDown();
+}
+
+function bindGalleryItems() {
+    let images = document.querySelectorAll('.gallery  a');
+
+    for (let image of images) {
+        image.addEventListener('click', showImage);
+    }
+}
+
+function showImage(event) {
+    event.preventDefault();
+
+    let link = event.target.parentElement.href;
+
+    let image = document.querySelector('.gallery-popup img');
+
+    image.src = link;
+
+    let popup = document.getElementById('gallery-preview');
+    popup.classList.add('visible');
+
+}
+
+function bindKeyDown() {
+    window.addEventListener('keydown', bindKeyDownHandler);
+}
+
+function bindKeyDownHandler(event) {
+    switch (event.key) {
+        case "Escape":
+            hidePopup();
+            break;
+
+    }
+}
+
+window.addEventListener('load', init);

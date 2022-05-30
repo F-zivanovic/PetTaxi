@@ -246,22 +246,42 @@
 
         <div class="gallery-content mt-4">
             <div class="gallery-content-item w-100">
-                <img src="assets/img/gallery-1.jpg" alt="gallery-img">
+                <a href="assets/img/gallery-1.jpg">
+                    <img src="assets/img/gallery-1.jpg" alt="gallery-img">
+                </a>
             </div>
             <div class="gallery-content-item w-100">
-                <img src="assets/img/gallery-2.jpg" alt="gallery-img">
+                <a href="assets/img/gallery-2.jpg">
+                    <img src="assets/img/gallery-2.jpg" alt="gallery-img">
+                </a>
             </div>
             <div class="gallery-content-item w-100">
-                <img src="assets/img/gallery-3.jpg" alt="gallery-img">
+                <a href="assets/img/gallery-3.jpg">
+                    <img src="assets/img/gallery-3.jpg" alt="gallery-img">
+                </a>
             </div>
             <div class="gallery-content-item w-100">
-                <img src="assets/img/gallery-4.jpg" alt="gallery-img">
+                <a href="assets/img/gallery-4.jpg">
+                    <img src="assets/img/gallery-4.jpg" alt="gallery-img">
+                </a>
             </div>
             <div class="gallery-content-item w-100">
-                <img src="assets/img/gallery-5.jpg" alt="gallery-img">
+                <a href="assets/img/gallery-5.jpg">
+                    <img src="assets/img/gallery-5.jpg" alt="gallery-img">
+                </a>
             </div>
             <div class="gallery-content-item w-100">
-                <img src="assets/img/gallery-6.jpg" alt="gallery-img">
+                <a href="assets/img/gallery-6.jpg">
+                    <img src="assets/img/gallery-6.jpg" alt="gallery-img">
+                </a>
+            </div>
+        </div>
+
+        <div class="gallery-popup" id="gallery-preview">
+            <i class="far fa-times-circle"></i>
+
+            <div class="gallery-popup-body">
+                <img src="#" alt="Loading image...">
             </div>
         </div>
     </section>
@@ -274,7 +294,7 @@
         <div class="subscription-content container">
 
             <div class="subscription-content-card">
-                <a href="index.html" class="sub-logo fw-bold"><strong>PetTaxi</strong></a>
+                <a href="index.php" class="sub-logo fw-bold"><strong>PetTaxi</strong></a>
                 <p class="text-white">Best Pet Taxi</p>
             </div>
 
@@ -331,6 +351,8 @@
 
     <!-- Custom JS -->
     <script src="assets/js/main.js"></script>
+
+
 </body>
 
 </html>
