@@ -30,6 +30,9 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
 </head>
 
 <body>
@@ -81,9 +84,11 @@
 
     <!-- About section -->
     <section class="about container" id="about">
-        <h3 class="section-tittle">O nama</h3>
-        <h4 class="section-subtittle">Najpovoljniji prevoz Vaših ljubimaca - Zakažite i uverite se</h4>
-        <p class="mt-2 text-justify"><strong>Prevoz ljubimaca</strong> je savršen način da Vaš ljubimac stigne na
+        <h3 class="section-tittle" data-aos="fade-up">O nama</h3>
+        <h4 class="section-subtittle" data-aos="fade-up">Najpovoljniji prevoz Vaših ljubimaca - Zakažite i uverite se
+        </h4>
+        <p class="mt-2 text-justify" data-aos="fade-up"><strong>Prevoz ljubimaca</strong> je savršen način da Vaš
+            ljubimac stigne na
             željeno mesto bez
             stresa za Vas i njega. Zbog problema sa kojima se vlasnici kućnih ljubimaca svakodnevno susreću vezani za
             prevoz, taxijem ili javnim prevozom, mi smo odlučili da Vam pomognemo. Tako što ćemo Vas i Vaše ljubimce
@@ -93,7 +98,7 @@
         </p>
 
         <div class="about-content mt-3">
-            <article>
+            <article data-aos="slide-right">
                 <ul class="mt-3">
                     <li><i class="fas fa-angle-right mr-2 text-primary"></i>Prevoz do novih vlasnika </li>
                     <li class="pt-1"><i class="fas fa-angle-right mr-2 text-primary"></i>Prevoz na izložbe</li>
@@ -118,7 +123,7 @@
                 </div>
             </article>
 
-            <article>
+            <article data-aos="slide-left">
                 <img src="assets/img/about-img.jpg" alt="about-img">
             </article>
         </div>
@@ -134,37 +139,37 @@
         <h4 class=" section-subtittle container text-white">Kako funkcioniše zakazivanje</h4>
 
         <div class="services-content text-center container">
-            <article class="mt-4">
+            <article class="mt-4" data-aos="slide-right">
                 <i class="fas fa-phone-alt"></i>
                 <i class="fas fa-comments"></i>
                 <h5 class="text-white">Zakažite termin</h5>
                 <p class="text-white fw-600">Pozivom na broj telefona ili popunjavanjem forme na sajtu</p>
             </article>
-            <article class="mt-4">
+            <article class="mt-4" data-aos="slide-left">
                 <i class="fas fa-calendar-alt"></i>
                 <i class="fas fa-clock"></i>
                 <h5 class="text-white">Potvrda termina</h5>
                 <p class="text-white fw-600">Ako je termin slobodan dobijate obaveštenje</p>
             </article>
-            <article class="mt-4">
+            <article class="mt-4" data-aos="slide-right">
                 <i class="fas fa-car"></i>
                 <i class="fas fa-angle-double-right"></i>
                 <h5 class="text-white">Početak vožnje</h5>
                 <p class="text-white fw-600">Vozač dolazi na unapred udogovorenu adresu i vreme</p>
             </article>
-            <article class="mt-4">
+            <article class="mt-4" data-aos="slide-left">
                 <i class="fas fa-exclamation"></i>
                 <i class="fas fa-bone"></i>
                 <h5 class="text-white">Dolazak na adresu</h5>
                 <p class="text-white fw-600">Na brz i bezbedan način dolazite do krajnje lokacije</p>
             </article>
-            <article class="mt-4">
+            <article class="mt-4" data-aos="slide-right">
                 <i class="fas fa-angle-double-left"></i>
                 <i class="fas fa-exclamation"></i>
                 <h5 class="text-white">Zavrsetak vožnje</h5>
                 <p class="text-white fw-600">Povratak na početnu lokaciju Vašeg ljubimca</p>
             </article>
-            <article class="mt-4">
+            <article class="mt-4" data-aos="slide-left">
                 <i class="fas fa-money-bill-wave"></i>
                 <i class="fas fa-smile"></i>
                 <h5 class="text-white">Naplata vožnje</h5>
@@ -183,7 +188,7 @@
         <h4 class="section-subtittle">Kako da stupite u kontakt sa nama</h4>
 
         <div class="contact-content mt-4">
-            <form action="assets/php/reachout.php" method="POST" name="contact">
+            <form action="assets/php/reachout.php" method="POST" name="contact" data-aos="slide-right">
 
                 <div class="form-group w-100">
                     <input name="name" type="text" placeholder="Vaše ime" required class="form-control w-100" id="name">
@@ -214,7 +219,7 @@
                 <button type="button" id="reset-btn">Resetuj formu</button>
             </form>
 
-            <div class="contact-info mt-4">
+            <div class="contact-info mt-4" data-aos="slide-left">
                 <div class="contact-info-item text-center mt-3">
                     <i class="fas fa-map-marker-alt mb-2"></i>
                     <p class="fw-bold">Adresa:</p>
@@ -240,7 +245,7 @@
 
 
     <!-- Gallery section -->
-    <section class="gallery container" id="gallery">
+    <section class="gallery container" id="gallery" data-aos="fade-up">
         <h3 class="section-tittle">Galerija</h3>
         <h4 class="section-subtittle">Galerija ljubimaca naših klijenata</h4>
 
@@ -351,6 +356,17 @@
 
     <!-- Custom JS -->
     <script src="assets/js/main.js"></script>
+
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init(
+            {
+                duration: 800
+            }
+        );
+    </script>
 
 
 </body>
