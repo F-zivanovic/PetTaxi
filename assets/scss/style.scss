@@ -1,18 +1,10 @@
 /*-----------------------------------------
-EXTERNAL FILES
-------------------------------------------*/
-@import 'variables';
-@import 'mixins';
-@import 'utilities';
-@import 'animations';
-
-/*-----------------------------------------
 PARTIALS
 ------------------------------------------*/
-@import 'partials/__global';
-@import 'partials/__nav';
-@import 'partials/__header';
-@import 'partials/__about';
-@import 'partials/__services';
-@import 'partials/__contact';
-@import 'partials/__subscription';
+@use 'partials/global';
+@use 'partials/nav';
+@use 'partials/header';
+@use 'partials/about';
+@use 'partials/services';
+@use 'partials/contact';
+@use 'partials/subscription';

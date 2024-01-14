@@ -1,3 +1,5 @@
+@use '../index' as *;
+
 .subscription {
     background: linear-gradient(45deg, $secondaryColor 0%, $primaryColor 100%);
 

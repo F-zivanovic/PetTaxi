@@ -1,4 +1,8 @@
-$utilities: ("color": ("prefix": "text",
+// @import './variables.scss';
+@use './variables.scss' as *;
+
+$utilities: (
+    "color": ("prefix": "text",
         "values": ("primary": $primaryColor,
             "secondary": $secondaryColor,
             "white": $white,

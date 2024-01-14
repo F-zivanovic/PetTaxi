@@ -1,4 +1,6 @@
-@mixin flex ($justify, $align, $direction:row, $wrap:nowrap) {
+@use './variables.scss' as *;
+
+@mixin flex ($justify, $align, $direction: row, $wrap: nowrap) {
     display: flex;
     justify-content: $justify;
     align-items: $align;
@@ -55,7 +57,7 @@
     width: $width;
 }
 
-@mixin positioning ($position, $top, $right, $bottom, $left, $width:100%, $height:100%) {
+@mixin positioning ($position, $top, $right, $bottom, $left, $width: 100%, $height: 100%) {
     position: $position;
     top: $top;
     right: $right;

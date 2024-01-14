@@ -1,3 +1,5 @@
+@use '../index' as *;
+
 nav {
     padding: 15px 0px;
     background: linear-gradient(45deg, $secondaryColor 0%, $primaryColor 100%);
