@@ -38,7 +38,7 @@
                 gap: 0.5rem;
             }
 
-            @include breakpoint(md) {
+            @include breakpoint(lg) {
                 display: none;
             }
         }

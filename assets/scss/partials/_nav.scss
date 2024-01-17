@@ -1,109 +1,122 @@
 @use '../index' as *;
 
-nav {
-    padding: 15px 0px;
-    background: linear-gradient(45deg, $secondaryColor 0%, $primaryColor 100%);
-    position: fixed;
-    z-index: 15;
+.nav {
+    @include flex(space-between, center);
+    position: relative;
+    height: 10vh;
 
-    @include breakpoint(md) {
-        padding: 10px 0px;
+    &__logo {
+        padding-left: 3rem;
+        text-transform: uppercase;
+        font-size: 3rem;
+        color: $headingsColor;
+        letter-spacing: 1.5px;
+
+        @include breakpoint(sm) {
+            font-size: 2rem;
+            padding-left: 2rem;
+        }
     }
 
-    @include breakpoint(sm) {
-        padding: 5px 0px;
-    }
+    &__list {
+        @include flex(flex-start, stretch, row, nowrap, 2rem);
+        transition: 0s;
 
-    .nav-content {
-        @include flex(space-between, center);
+        @include breakpoint(lg) {
+            flex-direction: column;
+            position: absolute;
+            top: 100%;
+            z-index: 100;
+            background-color: $primaryColor;
+            gap: 1rem;
+            color: white;
+            width: 100%;
+            padding: 1rem 0;
+            padding-left: 3rem;
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
 
-        .logo {
-            font-size: 1.8rem;
-            letter-spacing: 1px;
+            &.open {
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            }
+        }
 
-            @include breakpoint(md) {
-                font-size: 1.5rem;
+        @include breakpoint(sm) {
+            padding-left: 2rem;
+        }
+
+        &__item {
+
+            .nav__list__link {
+                display: inline-block;
+                color: $headingsColor;
+                text-transform: uppercase;
+                font-weight: 700;
+                height: 10vh;
+                line-height: 10vh;
+                position: relative;
+
+                &::before {
+                    position: absolute;
+                    top: calc(0% - 2px);
+                    display: block;
+                    content: "";
+                    width: 0%;
+                    height: 3px;
+                    background-color: $primaryColor;
+                    transition: .5s linear;
+                }
+
+                &:hover::before {
+                    width: 100%;
+                }
+
+                @include breakpoint(lg) {
+                    color: white;
+                    height: 2rem;
+                    line-height: 2rem;
+                }
+            }
+        }
+
+        .nav__btn {
+            background-color: $primaryColor;
+            color: white;
+            text-transform: uppercase;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 2rem;
+
+            @include breakpoint(lg) {
+                background-color: white;
+                color: $primaryColor;
+                border: 2px solid $primaryColor;
+                justify-content: flex-start;
+                padding: 1rem 2rem;
+                margin-right: 3rem;
             }
 
             @include breakpoint(sm) {
-                font-size: 1rem;
+                padding: 1rem;
             }
+
         }
+    }
 
+    #nav__hamburger {
+        display: none;
 
-        ul {
-            @include flex(center, center);
-
-            @include breakpoint(lg) {
-                display: none;
-            }
-        }
-
-
-        .toggle {
-            background: url(https://i.ibb.co/HrfVRcx/menu.png);
-            @include bgImage(center, no-repeat, 25px, 45px, 45px);
+        @include breakpoint(lg) {
+            display: block;
             cursor: pointer;
-            z-index: 20;
-            display: none;
-
-            @include breakpoint(lg) {
-                display: block;
-            }
-
-            @include breakpoint(sm) {
-                background-size: 20px;
-            }
-        }
-    }
-
-
-    .hamburger-menu {
-        background: linear-gradient(45deg, $secondaryColor 0%, $primaryColor 100%);
-        @include positioning(fixed, 0%, 0%, auto, auto);
-        z-index: 15;
-        animation: moveInFromLeft 1s;
-
-        @media(min-width:992px) {
-            display: none;
+            font-size: 2rem;
+            margin-right: 3rem;
         }
 
-        &.hidden {
-            display: none;
-        }
-
-        ul {
-            @include positioning(absolute, 50%, auto, auto, 50%, 100%, auto);
-            transform: translate(-50%, -50%);
-
-            li {
-                font-size: 1.5rem;
-                animation: moveInFromLeft 2s;
-
-                @include breakpoint(sm) {
-                    font-size: 1.1rem;
-                }
-
-                &:nth-child(1) {
-                    animation-delay: 100ms;
-                }
-
-                &:nth-child(2) {
-                    animation-delay: 150ms;
-                }
-
-                &:nth-child(3) {
-                    animation-delay: 200ms;
-                }
-
-                &:nth-child(4) {
-                    animation-delay: 250ms;
-                }
-
-                &:nth-child(5) {
-                    animation-delay: 300ms;
-                }
-            }
+        @include breakpoint(sm) {
+            font-size: 1.5rem;
+            margin-right: 2rem;
         }
     }
 }
