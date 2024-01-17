@@ -2,9 +2,11 @@
 PARTIALS
 ------------------------------------------*/
 @use 'partials/global';
-@use 'partials/nav';
-@use 'partials/header';
-@use 'partials/about';
-@use 'partials/services';
-@use 'partials/contact';
-@use 'partials/subscription';
+@use 'partials/topnav';
+
+// @use 'partials/nav';
+// @use 'partials/header';
+// @use 'partials/about';
+// @use 'partials/services';
+// @use 'partials/contact';
+// @use 'partials/subscription';

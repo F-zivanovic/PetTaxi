@@ -5,13 +5,23 @@
     padding: 0;
     margin: 0;
     scroll-behavior: smooth;
+    transition: .5s linear;
+    list-style-type: none;
+    text-decoration: none;
+    font-family: 'Montserrat',
+        sans-serif;
+    border: none;
+    outline: none;
 }
 
 body {
-    font-family: $bodyFont;
     line-height: 1.5;
-    font-size: $fontSize;
+    font-size: 100%;
     overflow-x: hidden;
+
+    @include breakpoint(sm) {
+        font-size: 85%;
+    }
 }
 
 h1,
@@ -20,106 +30,30 @@ h3,
 h4,
 h5,
 h6 {
-    color: $headingsColor;
-    font-weight: 700;
+    color: #212121;
+    text-transform: capitalize;
 }
 
 img {
     width: 100%;
+    object-fit: cover;
+    vertical-align: middle;
 }
 
-ul {
-    list-style-type: none;
+i {
+    cursor: pointer;
 }
 
 section {
-    padding: $padding;
-}
-
-
-a {
-    text-decoration: none;
-    color: $white;
-    transition: 200ms;
-
-    &:hover {
-        transition: $transition;
-        cursor: pointer;
-        opacity: 0.75;
-    }
-}
-
-
-p {
-    font-size: 1rem;
-
-    @include breakpoint(sm) {
-        font-size: 0.8rem;
-    }
-}
-
-.w-100 {
-    width: 100%;
+    padding: 70px 0;
 }
 
 .container {
-    width: 90%;
+    width: 80%;
     margin: 0px auto;
 
     @include breakpoint(md) {
         width: 80%;
         margin: 0px auto;
-    }
-}
-
-button {
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: 700;
-    background: linear-gradient(45deg, $secondaryColor 0%, $primaryColor 100%);
-    padding: 15px 20px;
-    border-radius: 5px;
-    border: 2px solid white;
-    font-size: 0.9rem;
-
-    &:hover {
-        background: linear-gradient(45deg, $primaryColor 0%, $secondaryColor 100%);
-        transition: $transition;
-        cursor: pointer;
-    }
-
-    @include breakpoint(sm) {
-        padding: 10px;
-        font-size: 0.8rem;
-    }
-}
-
-.section-tittle {
-    font-size: 2rem;
-    color: $black;
-
-    &::after {
-        display: block;
-        content: "";
-        background: linear-gradient(45deg, #207dff 0%, #00bd55 100%);
-        width: 150px;
-        height: 5px;
-        margin: 10px 0px;
-
-        @include breakpoint(sm) {
-            width: 100px;
-        }
-    }
-
-    @include breakpoint(sm) {
-        font-size: 1.3rem;
-    }
-}
-
-.section-subtittle {
-    font-size: 1.5rem;
-
-    @include breakpoint(sm) {
-        font-size: 1rem;
     }
 }

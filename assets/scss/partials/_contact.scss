@@ -1,77 +1,77 @@
-@use '../index' as *;
+// @use '../index' as *;
 
-.contact {
+// .contact {
 
-  &-content {
+//   &-content {
 
-    @include flex(space-between, center);
+//     @include flex(space-between, center);
 
-    @include breakpoint(lg) {
-      flex-direction: column;
-    }
+//     @include breakpoint(lg) {
+//       flex-direction: column;
+//     }
 
 
-    .contact-info {
-      flex: 1;
+//     .contact-info {
+//       flex: 1;
 
-      @include breakpoint(lg) {
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-      }
+//       @include breakpoint(lg) {
+//         display: flex;
+//         justify-content: space-between;
+//         width: 100%;
+//       }
 
-      @include breakpoint(md) {
-        display: none;
-      }
+//       @include breakpoint(md) {
+//         display: none;
+//       }
 
-      &-item {
-        i {
-          @include icons;
-        }
-      }
+//       &-item {
+//         i {
+//           @include icons;
+//         }
+//       }
 
-    }
+//     }
 
-    form {
+//     form {
 
-      flex: 2;
+//       flex: 2;
 
-      @include breakpoint(sm) {
-        width: 100%;
-      }
+//       @include breakpoint(sm) {
+//         width: 100%;
+//       }
 
-      .form-control {
-        margin-top: 10px;
-        padding: 15px;
-        font-size: 1rem;
-        font-weight: 600;
-        border-radius: 5px;
-        border: none;
-        outline: none;
-        border: 2px solid $primaryColor;
+//       .form-control {
+//         margin-top: 10px;
+//         padding: 15px;
+//         font-size: 1rem;
+//         font-weight: 600;
+//         border-radius: 5px;
+//         border: none;
+//         outline: none;
+//         border: 2px solid $primaryColor;
 
-        @include breakpoint(sm) {
-          font-size: 0.7rem;
-          padding: 15px 10px;
-        }
+//         @include breakpoint(sm) {
+//           font-size: 0.7rem;
+//           padding: 15px 10px;
+//         }
 
-      }
+//       }
 
-      .form-group {
-        @include flex(space-between, center);
+//       .form-group {
+//         @include flex(space-between, center);
 
-        @include breakpoint(sm) {
-          flex-direction: column;
-        }
+//         @include breakpoint(sm) {
+//           flex-direction: column;
+//         }
 
-        input {
-          flex: 0 0 48%;
-        }
-      }
+//         input {
+//           flex: 0 0 48%;
+//         }
+//       }
 
-      .sbm-btn {
-        @extend button;
-      }
-    }
-  }
-}
+//       .sbm-btn {
+//         @extend button;
+//       }
+//     }
+//   }
+// }

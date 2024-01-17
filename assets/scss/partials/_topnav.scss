@@ -1,0 +1,46 @@
+@use '../index' as *;
+
+.topnav {
+    padding: 0;
+    border-bottom: 3px solid #F3F3F3;
+
+    &__wrapper {
+        @include flex();
+
+        .topnav__item {
+            padding: 1rem;
+            flex: 1;
+            @include flex(flex-start, center, row, nowrap, 1rem);
+
+            &:not(:last-child) {
+                border-right: 3px solid #F3F3F3;
+            }
+
+            i {
+                color: $primaryColor;
+                font-size: 2rem;
+            }
+
+            .topnav__info {
+
+                .topnav__heading {
+                    text-transform: uppercase;
+                }
+
+                .topnav__desc {
+                    font-size: 0.9rem;
+                }
+            }
+
+            @include breakpoint(xl) {
+                flex-direction: column;
+                text-align: center;
+                gap: 0.5rem;
+            }
+
+            @include breakpoint(md) {
+                display: none;
+            }
+        }
+    }
+}
