@@ -1,30 +1,119 @@
 @use '../index' as *;
 
-header {
+.header {
+    height: auto;
+    background-image: url('../../assets/img/header-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding: 3rem 0;
 
-    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url('../img/header-bg.jpg');
-    @include bgImage(center, no-repeat, cover, 100vh, 100%);
-    @include flex(center, center, column);
+    &::before {
+        position: absolute;
+        top: 0%;
+        right: 0%;
+        bottom: 0%;
+        left: 0%;
+        content: "";
+        background-color: rgba(0, 0, 0, .5);
+        z-index: 2;
+    }
 
-    .header-content {
-        @include flex(center, center, column);
-        animation: moveInFromBottom 1.3s ease-in-out;
-        margin: 0px 10px;
+    &__wrapper {
+        @include flex(space-between, center, row, wrap, 2rem);
 
-        h1 {
-            font-size: 3rem;
-            margin-bottom: 10px;
+        .header__item {
+            flex: 0 0 47%;
+            z-index: 2;
 
-            @include breakpoint(md) {
-                font-size: 2rem;
+            @include breakpoint(xl) {
+                flex: 0 0 100%;
             }
 
-            @include breakpoint(sm) {
+            .header__heading {
+                color: white;
+                font-size: 3rem;
+                text-transform: uppercase;
+                font-weight: 800;
+
+                @include breakpoint(md) {
+                    font-size: 2rem;
+                }
+
+                @include breakpoint(sm) {
+                    font-size: 1.7rem;
+                }
+            }
+
+            .header__subheading {
+                color: white;
                 font-size: 1.5rem;
+                font-weight: 600;
+
+                @include breakpoint(md) {
+                    font-size: 1rem;
+                }
             }
 
-            @include breakpoint(xs) {
-                font-size: 1rem;
+            .header__link {
+                @include btn();
+            }
+
+            &:nth-child(2) {
+
+                .header__form {
+                    padding: 2rem;
+                    border: 1px solid rgba(255, 255, 255, .4);
+                    background: rgba(255, 255, 255, .3);
+                    border-radius: 5px;
+
+                    @include breakpoint(sm) {
+                        padding: 1rem;
+                    }
+
+                    .contact__heading {
+                        color: white;
+                        margin-bottom: 1rem;
+                    }
+
+                    .form__group {
+                        display: flex;
+                        gap: 1rem;
+                        margin-bottom: 0.7rem;
+
+                        @include breakpoint(md) {
+                            flex-direction: column;
+                        }
+
+                        input {
+                            padding: 0.7rem;
+                            flex: 1;
+                            color: black;
+
+                            @include breakpoint(sm) {
+                                padding: 0.5rem;
+                                font-size: 0.8rem;
+                            }
+                        }
+                    }
+
+                    textarea {
+                        width: 100%;
+                        padding: 0.5rem;
+                    }
+
+                    .submit__btn {
+                        width: 100%;
+                        display: block;
+                        padding: 0.8rem 0;
+                        text-transform: uppercase;
+                        font-weight: bold;
+                        background-color: $primaryColor;
+                        color: white;
+                        cursor: pointer;
+                    }
+                }
             }
         }
     }
