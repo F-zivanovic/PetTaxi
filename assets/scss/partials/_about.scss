@@ -2,59 +2,36 @@
 
 .about {
 
-    &-content {
-        @include flex(center, space-around, row, wrap);
+    &__descripiton {
+        text-align: justify;
+        margin-bottom: 2rem;
+    }
 
-        article {
+    &__wrapper {
+        @include flex(center, center, row, wrap, 2rem);
 
-            ul {
-                li {
-                    font-size: 1.2rem;
+        .about__list {
 
-                    @include breakpoint(sm) {
-                        font-size: 0.8rem;
-                    }
+            &__item {
+                font-weight: 500;
+                font-size: 1.1rem;
+
+                &:not(:last-child) {
+                    margin-bottom: 0.5rem;
                 }
-            }
-
-
-            &:first-child {
-                @include flex(center, center, column);
-
-                @include breakpoint(lg) {
-                    margin-top: 25px;
-                }
-            }
-
-
-            .about-icons {
 
                 i {
-                    @include icons;
-                }
-
-                span {
-                    font-size: 1rem;
-
-                    @include breakpoint(sm) {
-                        font-size: 0.8rem;
-                    }
+                    color: $primaryColor;
+                    margin-right: 0.5rem;
+                    font-size: 1.2rem;
                 }
             }
+        }
 
+        .about__img {
 
             img {
-                height: 600px;
-                object-fit: cover;
-                resize: both;
-
-                @include breakpoint(sm) {
-                    height: 400px;
-                }
-
-                @include breakpoint(xs) {
-                    height: 350px;
-                }
+                height: 400px;
             }
         }
     }
