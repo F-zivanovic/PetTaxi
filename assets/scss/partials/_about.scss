@@ -16,6 +16,14 @@
                 font-weight: 500;
                 font-size: 1.1rem;
 
+                @include breakpoint(sm) {
+                    font-size: 0.9rem;
+                }
+
+                @media(width<350px) {
+                    font-size: 0.8rem;
+                }
+
                 &:not(:last-child) {
                     margin-bottom: 0.5rem;
                 }

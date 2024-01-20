@@ -1,37 +1,70 @@
 @use '../index' as *;
 
 .services {
-
-    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url('../img/services-bg.jpg');
-    @include bgImage(center, no-repeat, cover, auto, 100%);
+    background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url('../img/services-bg.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     background-attachment: fixed;
 
-    h3 {
-        color: $white;
+    .section__header {
+        .section__desc {
+            color: white;
+        }
     }
 
-
-    &-content {
-        margin-top: 40px;
-        @include grid(2, 20px);
+    &__wrapper {
+        @include grid(2, 2rem);
+        margin-top: 3rem;
 
         @include breakpoint(lg) {
             grid-template-columns: repeat(1, 1fr);
         }
 
+        .services__item {
 
-        article {
+            @include breakpoint(lg) {
+                @include flex(center, center, column, nowrap, 0rem);
+                text-align: center;
+            }
+
+            i {
+                width: 55px;
+                height: 55px;
+                border-radius: 50%;
+                line-height: 55px;
+                font-size: 1.4rem;
+                text-align: center;
+                background-color: $primaryColor;
+                color: $white;
+                transition: 200ms;
+
+                &:hover {
+                    transform: rotate(360deg);
+                }
+
+                @include breakpoint(sm) {
+                    width: 45px;
+                    height: 45px;
+                    border-radius: 50%;
+                    line-height: 45px;
+                    font-size: 1rem;
+                }
+            }
 
             h5 {
                 font-size: 1.4rem;
+                color: white;
+                margin-top: 1rem;
 
                 @include breakpoint(sm) {
                     font-size: 1.1rem;
                 }
             }
 
-            i {
-                @include icons;
+            p {
+                color: white;
+                font-weight: 500;
             }
         }
     }
