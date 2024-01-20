@@ -20,3 +20,18 @@ navLinks.forEach((link) => {
 window.addEventListener('scroll', () => {
     navList.classList.remove('open');
 });
+
+
+
+// Dynamic date
+
+getYear();
+
+function getYear() {
+
+    let copy = document.querySelector('FOOTER .date');
+    let date = new Date();
+
+    copy.innerHTML = date.getFullYear();
+
+}

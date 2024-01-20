@@ -1,0 +1,76 @@
+@use '../index' as *;
+
+.footer {
+    padding-top: 4rem;
+    background-color: #f3f3f3;
+
+    &__wrapper {
+        @include grid(4, 1rem);
+
+        @include breakpoint(lg) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include breakpoint(md) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        .footer__item {
+
+            &:first-child {
+                a {
+                    font-size: 2rem;
+                    color: $primaryColor;
+                }
+
+                P {
+                    color: black;
+                    font-weight: bold;
+                }
+            }
+
+            .footer__heading {
+                font-size: 1.2rem;
+                text-transform: uppercase;
+                margin-bottom: 1rem;
+
+                @include breakpoint(sm) {
+                    font-size: 1.3rem;
+                }
+            }
+
+            .footer__list {
+
+                i {
+                    margin-right: 0.5rem;
+                    color: $primaryColor;
+                }
+
+                li {
+                    font-weight: 500;
+
+                    &:not(:last-child) {
+                        margin-bottom: 0.4rem;
+                    }
+
+                    @include breakpoint(sm) {
+                        font-size: 0.9rem;
+                    }
+
+                    a {
+                        color: black;
+
+                        &:hover {
+                            color: $primaryColor;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__copy {
+        text-align: center;
+        padding: 2rem 0;
+    }
+}

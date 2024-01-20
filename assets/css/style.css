@@ -853,6 +853,69 @@ section {
   font-weight: 500;
 }
 
+.footer {
+  padding-top: 4rem;
+  background-color: #f3f3f3;
+}
+.footer__wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1rem;
+}
+@media (max-width: 992px) {
+  .footer__wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .footer__wrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.footer__wrapper .footer__item:first-child a {
+  font-size: 2rem;
+  color: #7ab730;
+}
+.footer__wrapper .footer__item:first-child P {
+  color: black;
+  font-weight: bold;
+}
+.footer__wrapper .footer__item .footer__heading {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+@media (max-width: 576px) {
+  .footer__wrapper .footer__item .footer__heading {
+    font-size: 1.3rem;
+  }
+}
+.footer__wrapper .footer__item .footer__list i {
+  margin-right: 0.5rem;
+  color: #7ab730;
+}
+.footer__wrapper .footer__item .footer__list li {
+  font-weight: 500;
+}
+.footer__wrapper .footer__item .footer__list li:not(:last-child) {
+  margin-bottom: 0.4rem;
+}
+@media (max-width: 576px) {
+  .footer__wrapper .footer__item .footer__list li {
+    font-size: 0.9rem;
+  }
+}
+.footer__wrapper .footer__item .footer__list li a {
+  color: black;
+}
+.footer__wrapper .footer__item .footer__list li a:hover {
+  color: #7ab730;
+}
+.footer__copy {
+  text-align: center;
+  padding: 2rem 0;
+}
+
 /*-----------------------------------------
 PARTIALS
 ------------------------------------------*/
