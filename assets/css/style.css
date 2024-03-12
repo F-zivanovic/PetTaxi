@@ -1,5 +1,5 @@
 .text-primary {
-  color: #7ab730;
+  color: #00336c;
 }
 
 .text-secondary {
@@ -19,7 +19,7 @@
 }
 
 .bg-primary {
-  background-color: #7ab730;
+  background-color: #00336c;
 }
 
 .bg-secondary {
@@ -394,12 +394,12 @@ section {
 }
 
 .section__header {
-  border-left: 5px solid #7ab730;
+  border-left: 5px solid #00336c;
   margin-bottom: 2rem;
   padding-left: 2rem;
 }
 .section__header .section__title {
-  color: #7ab730;
+  color: #00336c;
   text-transform: uppercase;
   font-size: 1.5rem;
 }
@@ -446,7 +446,7 @@ section {
   border-right: 3px solid #F3F3F3;
 }
 .topnav__wrapper .topnav__item i {
-  color: #7ab730;
+  color: #00336c;
   font-size: 2rem;
 }
 .topnav__wrapper .topnav__item .topnav__info .topnav__heading {
@@ -479,17 +479,8 @@ section {
   height: 10vh;
 }
 .nav__logo {
-  padding-left: 3rem;
-  text-transform: uppercase;
-  font-size: 3rem;
-  color: #323231;
-  letter-spacing: 1.5px;
-}
-@media (max-width: 576px) {
-  .nav__logo {
-    font-size: 2rem;
-    padding-left: 2rem;
-  }
+  width: 80px;
+  margin-left: 5rem;
 }
 .nav__list {
   display: flex;
@@ -506,7 +497,7 @@ section {
     position: absolute;
     top: 100%;
     z-index: 100;
-    background-color: #7ab730;
+    background-color: #00336c;
     gap: 1rem;
     color: white;
     width: 100%;
@@ -539,7 +530,7 @@ section {
   content: "";
   width: 0%;
   height: 3px;
-  background-color: #7ab730;
+  background-color: #00336c;
   transition: 0.5s linear;
 }
 .nav__list__item .nav__list__link:hover::before {
@@ -553,7 +544,7 @@ section {
   }
 }
 .nav__list .nav__btn {
-  background-color: #7ab730;
+  background-color: #00336c;
   color: white;
   text-transform: uppercase;
   font-weight: bold;
@@ -565,8 +556,8 @@ section {
 @media (max-width: 992px) {
   .nav__list .nav__btn {
     background-color: white;
-    color: #7ab730;
-    border: 2px solid #7ab730;
+    color: #00336c;
+    border: 2px solid #00336c;
     justify-content: flex-start;
     padding: 1rem 2rem;
     margin-right: 3rem;
@@ -633,7 +624,7 @@ section {
 }
 .header__wrapper .header__item .header__heading {
   color: white;
-  font-size: 3rem;
+  font-size: 2.5rem;
   text-transform: uppercase;
   font-weight: 800;
 }
@@ -649,8 +640,8 @@ section {
 }
 .header__wrapper .header__item .header__subheading {
   color: white;
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-size: 1.2rem;
+  font-weight: 700;
 }
 @media (max-width: 768px) {
   .header__wrapper .header__item .header__subheading {
@@ -662,7 +653,7 @@ section {
   margin-top: 1rem;
   padding: 1rem;
   text-transform: uppercase;
-  background-color: #7ab730;
+  background-color: #00336c;
   color: white;
   font-weight: 500;
   position: relative;
@@ -682,7 +673,7 @@ section {
   z-index: -1;
 }
 .header__wrapper .header__item .header__link:hover {
-  color: #7ab730;
+  color: #00336c;
 }
 .header__wrapper .header__item .header__link:hover::after {
   top: 0%;
@@ -693,7 +684,7 @@ section {
   height: 100%;
   transform: translate(0%, 0%);
   transition: 0.6s linear;
-  color: #7ab730;
+  color: #00336c;
 }
 .header__wrapper .header__item:nth-child(2) .header__form {
   padding: 2rem;
@@ -740,7 +731,7 @@ section {
   padding: 0.8rem 0;
   text-transform: uppercase;
   font-weight: bold;
-  background-color: #7ab730;
+  background-color: #00336c;
   color: white;
   cursor: pointer;
 }
@@ -775,7 +766,7 @@ section {
   margin-bottom: 0.5rem;
 }
 .about__wrapper .about__list__item i {
-  color: #7ab730;
+  color: #00336c;
   margin-right: 0.5rem;
   font-size: 1.2rem;
 }
@@ -822,7 +813,7 @@ section {
   line-height: 55px;
   font-size: 1.4rem;
   text-align: center;
-  background-color: #7ab730;
+  background-color: #00336c;
   color: #fff;
   transition: 200ms;
 }
@@ -874,7 +865,7 @@ section {
 }
 .footer__wrapper .footer__item:first-child a {
   font-size: 2rem;
-  color: #7ab730;
+  color: #00336c;
 }
 .footer__wrapper .footer__item:first-child P {
   color: black;
@@ -892,7 +883,7 @@ section {
 }
 .footer__wrapper .footer__item .footer__list i {
   margin-right: 0.5rem;
-  color: #7ab730;
+  color: #00336c;
 }
 .footer__wrapper .footer__item .footer__list li {
   font-weight: 500;
@@ -909,7 +900,7 @@ section {
   color: black;
 }
 .footer__wrapper .footer__item .footer__list li a:hover {
-  color: #7ab730;
+  color: #00336c;
 }
 .footer__copy {
   text-align: center;
